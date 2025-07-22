@@ -1,0 +1,50 @@
+{
+  "name": "my-v0-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:turbo": "next dev --turbopack",
+    "dev:clean": "rm -rf .next && next dev",
+    "dev:fresh": "rm -rf .next node_modules/.cache && next dev",
+    "dev:webpack": "next dev",
+    "dev:safe": "next dev",
+    "dev:nuclear": "rm -rf .next node_modules/.cache package-lock.json && npm install && next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "clean": "rm -rf .next node_modules/.cache",
+    "backup": "cp package.json package.json.backup",
+    "restore": "cp package.json.backup package.json || echo 'No backup found'",
+    "reset": "rm -rf .next && npm run backup && npm run dev"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^1.3.22",
+    "@huggingface/inference": "^4.3.2",
+    "@radix-ui/react-avatar": "^1.1.10",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-radio-group": "^1.3.7",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@supabase/supabase-js": "^2.50.3",
+    "ai": "^4.3.16",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.525.0",
+    "next": "15.3.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.5",
+    "tailwindcss": "^4",
+    "tw-animate-css": "^1.3.5",
+    "typescript": "^5"
+  }
+} 
