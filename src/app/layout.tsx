@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://conversationalist.vercel.app'),
   title: "Personalized AI Conversationalist",
   description: "Chat with AI personas for different purposes. Get personalized AI assistance for learning, work, and creative projects.",
   keywords: ["AI", "chatbot", "assistant", "conversation", "AI personas"],

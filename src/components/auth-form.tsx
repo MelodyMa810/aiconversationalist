@@ -58,7 +58,7 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
       } else if (!isLogin) {
         setError("Please check your email to confirm your account")
       }
-    } catch (err) {
+    } catch {
       setError("An unexpected error occurred")
     } finally {
       setIsLoading(false)
