@@ -39,12 +39,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-
-      <footer className="border-t py-6">
-        <div className="container mx-auto text-center text-sm text-muted-foreground">
-          <p>AI Conversationalist RLHF Platform &copy; {new Date().getFullYear()}</p>
-        </div>
-      </footer>
     </div>
   )
 }

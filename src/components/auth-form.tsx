@@ -37,9 +37,10 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
           const { error: insertError } = await supabase
             .from("users")
             .upsert({
+              id: data.user.id,
               email: data.user.email || email,
             }, {
-              onConflict: 'email'
+              onConflict: 'id'
             })
 
           if (insertError) {
@@ -57,7 +58,7 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
       } else if (!isLogin) {
         setError("Please check your email to confirm your account")
       }
-    } catch {
+    } catch (err) {
       setError("An unexpected error occurred")
     } finally {
       setIsLoading(false)
